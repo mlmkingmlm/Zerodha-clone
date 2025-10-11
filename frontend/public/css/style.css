@@ -1,0 +1,72 @@
+.hover-me:hover {
+    color: blue !important;
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+.tabbtns button{
+    border: none;
+    background-color: transparent;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgba(82, 119, 228, 0.845);
+    height: 60px;
+}
+
+.tabbtns{
+    height: 60px;
+}
+
+.tabbtns button:hover{
+    color: rgba(0, 0, 0, 0.662) !important;
+    transition: 0.3s;
+}
+
+.charges-p{
+    font-size: 13px;
+    text-align: justify;
+}
+
+.search-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    height: 50px;
+    margin-top: 20px;
+}
+
+.search-box input{
+    border: none;
+    background-color: transparent;
+    outline: none;
+    padding-left: 10px;
+}
+
+.signup {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.signup:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-3px);
+}
+
+.video-box {
+  position: relative;
+  overflow: hidden;
+  background: #000;
+  height: 100%;
+}
+
+.signup-video {
+  width: 100%;
+  height: 360px;
+  object-fit: cover; /* ensures video covers full side properly */
+  display: block;
+}
+

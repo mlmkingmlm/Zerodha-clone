@@ -1,0 +1,68 @@
+.search{
+    border: none;
+    outline: none;
+}
+
+.navbar{
+    z-index: 10;
+}
+
+ul{
+    list-style-type: none;
+}
+
+.stock-item:hover{
+    background-color: rgba(128, 128, 128, 0.235);
+    cursor: pointer;
+}
+
+.stock-item {
+  position: relative; 
+  overflow: hidden; 
+}
+
+.watchlist-actions {
+  position: absolute;
+  top: 50%;
+  right: 0px;  /* hide by default (move outside view) */
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.watchlist-actions.show { 
+  opacity: 1;
+}
+
+.buysell{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.modal-content{
+  margin-top:50%;
+}
+
+
+
+input{
+  outline: none !important;
+}
+
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #007bff;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+
