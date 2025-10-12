@@ -62,7 +62,7 @@ function Login() {
                                     <label htmlFor="" className='form-label'>Email*</label>
                                     <input type="email" className='form-control mb-2' name='email' onChange={getdata} />
                                     <label htmlFor="" className='form-label'>Password*</label>
-                                    <input type="text" className='form-control mb-2' name='password' onChange={getdata} />
+                                    <input type="password" className='form-control mb-2' name='password' onChange={getdata} />
                                     <button className='btn btn-primary mb-2 w-100' type='submit'>Login</button>
                                 </form>
                             </div>

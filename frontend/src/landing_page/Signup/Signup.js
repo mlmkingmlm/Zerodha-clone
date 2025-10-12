@@ -109,7 +109,7 @@ function Signup() {
                                     <input type="email" className='form-control mb-2' name='email' onChange={getdata} />
                                     {show ? <p className='text-danger'>{errormessage.email}</p> : null}
                                     <label htmlFor="" className='form-label'>Password*</label>
-                                    <input type="text" className='form-control mb-2' name='password' onChange={getdata} />
+                                    <input type="password" className='form-control mb-2' name='password' onChange={getdata} />
                                     {show ? <p className='text-danger'>{errormessage.password}</p> : null}
                                     <button className='btn btn-primary mb-2 w-100' type='submit'>Sign-up</button>
                                 </form>
