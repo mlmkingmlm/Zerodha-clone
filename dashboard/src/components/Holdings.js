@@ -102,7 +102,7 @@ function Holdings({ user }) {
                     <p className='mt-4'>P&L</p>
                 </div>
             </div>
-            <div className="row mt-5">
+            <div className="row mt-5 mb-5">
                 <VarticalGraph data={data} />
             </div>
         </>

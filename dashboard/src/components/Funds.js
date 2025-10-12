@@ -11,7 +11,7 @@ function Funds() {
                 <Link className="btn btn-primary">Withdraw</Link>
                 </div>
             </div>
-            <div className="row mt-5 pt-5 text-secondary">
+            <div className="row mt-5 pt-5 text-secondary mb-5">
                 <div className="col-md-5">
                     <span>
                         <p>Equity</p>

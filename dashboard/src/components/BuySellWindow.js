@@ -86,7 +86,7 @@ function BuySellWindow({ stock, actiontype, userid }) {
       setOtherOrders(data.holdings)
     }
     fetchHoldings();
-  }, []);
+  }, [otherOrders.length]);
 
   return (
     <div

@@ -32,7 +32,7 @@ const Orders = ({ user }) => {
   },[user]);
 
   return (
-    <div className="text-center">
+    <div className="text-center mb-5">
       {
         orders && orders.length>0 ? <div className="col overflow-auto">
           <table className=' w-100'>

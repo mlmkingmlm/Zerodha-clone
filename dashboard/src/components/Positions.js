@@ -21,7 +21,7 @@ function Positions() {
         <>
             <h3 className="text-secondary">Positions({positions.length})</h3>
 
-            <div className="col overflow-auto">
+            <div className="col overflow-auto mb-5">
                 <table className='mt-4 w-100'>
                     <tr className='border-top border-bottom'>
                         <th className='p-3 text-secondary border-end'>Product</th>
