@@ -1,10 +1,11 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+const FRONTEND_URL = process.env.REACT_APP_FRONTEND_URL;
 
 function Navbar() {
     function logout(){
         localStorage.clear();
-        window.location.href = "http://localhost:3001/login";
+        window.location.href = `${FRONTEND_URL}/login`;
     }
     return (
         <>

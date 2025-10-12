@@ -2,6 +2,9 @@ import React, { useEffect, useState } from "react";
 import Navbar from "./components/Navbar";
 import Dashboard from "./components/Dashboard";
 import { useSearchParams } from "react-router-dom";
+const API_URL = process.env.REACT_APP_API_URL
+const FRONTEND_URL = process.env.REACT_APP_FRONTEND_URL;
+
 
 function App() {
   const [searchParams] = useSearchParams();
@@ -22,7 +25,7 @@ function App() {
 
     async function verifyToken() {
       try {
-        const res = await fetch("http://localhost:8000/verify", {
+        const res = await fetch(`${API_URL}/verify`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -68,7 +71,7 @@ function App() {
           <Dashboard user={user} />
         </>
       ) : (
-        window.location.href = "http://localhost:3001/login"
+        window.location.href = `${FRONTEND_URL}/login`
       )}
     </>
   );

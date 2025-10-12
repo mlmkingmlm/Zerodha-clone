@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 
+const API_URL = process.env.REACT_APP_API_URL
+
 function Signup() {
     let navigate = useNavigate()
     const [userdata, setUserdata] = useState({
@@ -53,7 +55,7 @@ function Signup() {
         }
         else {
             try {
-                let response = await fetch("http://localhost:8000/signup", {
+                let response = await fetch(`${API_URL}/signup`, {
                     method: "post",
                     headers: {
                         "Content-Type": "application/json"

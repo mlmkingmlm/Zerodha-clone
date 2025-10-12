@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+const API_URL = process.env.REACT_APP_API_URL
 
 const Orders = ({ user }) => {
   const [orders, setOrders] = useState([])
   async function getOrders() {
     try {
       // ✅ Send ID via query string
-      const response = await fetch(`http://localhost:8000/getorders?id=${user._id}`, {
+      const response = await fetch(`${API_URL}/getorders?id=${user._id}`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",

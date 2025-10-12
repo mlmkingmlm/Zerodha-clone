@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react'
 import { VarticalGraph } from './VarticalGraph';
+const API_URL = process.env.REACT_APP_API_URL
 
 function Holdings({ user }) {
     const [holdings, setHoldings] = useState([]);
@@ -7,7 +8,7 @@ function Holdings({ user }) {
     const profitRefs = useRef({});
     useEffect(() => {
         async function fetchHoldings() {
-            const res = await fetch(`http://localhost:8000/holdings?id=${user._id}`);
+            const res = await fetch(`${API_URL}/holdings?id=${user._id}`);
             const data = await res.json();
             setHoldings(data.holdings || []);
         }

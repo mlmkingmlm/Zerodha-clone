@@ -1,4 +1,6 @@
 import React, {useState, useEffect} from 'react'
+const API_URL = process.env.REACT_APP_API_URL
+
 
 function Positions() {
     const [positions, setPositions] = useState([]);
@@ -6,7 +8,7 @@ function Positions() {
     useEffect(() => {
         const fetchpositions = async () => {
             try {
-                const response = await fetch("http://localhost:8000/allpositions");
+                const response = await fetch(`${API_URL}/allpositions`);
                 const data = await response.json();
                 setPositions(data);
             } catch (error) {

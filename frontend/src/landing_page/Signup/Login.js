@@ -1,5 +1,8 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+const API_URL = process.env.REACT_APP_API_URL
+const DASHBOARD_URL = process.env.REACT_APP_DASHBOARD_URL;
+
 
 function Login() {
     const [userdata, setUserdata] = useState({
@@ -22,7 +25,7 @@ function Login() {
     async function logindata(e) {
         e.preventDefault();
         try {
-            let response = await fetch("http://localhost:8000/login", {
+            let response = await fetch(`${API_URL}/login`, {
                 method: "post",
                 headers: {
                     "Content-Type": "application/json"
@@ -33,7 +36,7 @@ function Login() {
             });
             const data = await response.json();
             if(data.success){
-                window.location.href = `http://localhost:3000?token=${data.token}`;
+                window.location.href = `${DASHBOARD_URL}?token=${data.token}`;
             }
             else{
                 setShow(true);

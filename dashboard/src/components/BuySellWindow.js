@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-
+const API_URL = process.env.REACT_APP_API_URL
 function BuySellWindow({ stock, actiontype, userid }) {
   const [stockQuantity, setStockQuantity] = useState(1);
   const [errorMessage, setErrorMessage] = useState("");
@@ -38,7 +38,7 @@ function BuySellWindow({ stock, actiontype, userid }) {
       setErrorMessage("");
       setSuccessMessage("");
 
-      const response = await fetch("http://localhost:8000/neworder", {
+      const response = await fetch(`${API_URL}/neworder`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -81,7 +81,7 @@ function BuySellWindow({ stock, actiontype, userid }) {
 
   useEffect(() => {
     async function fetchHoldings() {
-      const res = await fetch(`http://localhost:8000/holdings?id=${userid}`);
+      const res = await fetch(`${API_URL}/holdings?id=${userid}`);
       const data = await res.json();
       setOtherOrders(data.holdings)
     }
