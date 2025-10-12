@@ -37,7 +37,7 @@ function Hero() {
                 </div>
                 <div className="row mt-5">
                     <div className="col-md-4 mt-5 pt-5 text-center">
-                        <img src="/media/images/nikhil.jpg" alt="" className='w-50' style={{ borderRadius: "50%" }} />
+                        <img src="/media/images/Nikhil.jpg" alt="" className='w-50' style={{ borderRadius: "50%" }} />
                         <p className='mt-3 fw-semibold'>Nikhil Kamath</p>
                         <p>Co-founder & CFO</p>
                         <div class="accordion" id="accordionExample">
@@ -56,7 +56,7 @@ function Hero() {
                         </div>
                     </div>
                     <div className="col-md-4 mt-5 pt-5 text-center">
-                        <img src="/media/images/kailash.jpg" alt="" className='w-50' style={{ borderRadius: "50%" }} />
+                        <img src="/media/images/Kailash.jpg" alt="" className='w-50' style={{ borderRadius: "50%" }} />
                         <p className='mt-3 fw-semibold'>Dr. Kailash Nadh</p>
                         <p>CTO</p>
                         <div class="accordion" id="accordionExample">
@@ -75,7 +75,7 @@ function Hero() {
                         </div>
                     </div>
                     <div className="col-md-4 mt-5 pt-5 text-center">
-                        <img src="/media/images/venu.jpg" alt="" className='w-50' style={{ borderRadius: "50%" }} />
+                        <img src="/media/images/Venu.jpg" alt="" className='w-50' style={{ borderRadius: "50%" }} />
                         <p className='mt-3 fw-semibold'>Venu Madhav</p>
                         <p>COO</p>
                         <div class="accordion" id="accordionExample">
@@ -94,7 +94,7 @@ function Hero() {
                         </div>
                     </div>
                     <div className="col-md-4 mt-5 pt-5 text-center">
-                        <img src="/media/images/hanan.jpg" alt="" className='w-50' style={{ borderRadius: "50%" }} />
+                        <img src="/media/images/Hanan.jpg" alt="" className='w-50' style={{ borderRadius: "50%" }} />
                         <p className='mt-3 fw-semibold'>Hanan Delvi</p>
                         <p>CCO</p>
                         <div class="accordion" id="accordionExample">
