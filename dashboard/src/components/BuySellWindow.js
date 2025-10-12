@@ -51,7 +51,7 @@ function BuySellWindow({ stock, actiontype, userid }) {
           user_id: userid
         }),
       });
-      console.log(response)
+
 
       if (!response.ok) {
         throw new Error("Server returned an error");
@@ -72,6 +72,7 @@ function BuySellWindow({ stock, actiontype, userid }) {
         const modalInstance = window.bootstrap.Modal.getInstance(modalElement);
         modalInstance?.hide();
       }, 1000);
+      fetchHoldings();
     } catch (error) {
       setErrorMessage("❌ Failed to place order. Please try again.");
     } finally {
@@ -79,12 +80,13 @@ function BuySellWindow({ stock, actiontype, userid }) {
     }
   }
 
+  async function fetchHoldings() {
+    const res = await fetch(`${API_URL}/holdings?id=${userid}`);
+    const data = await res.json();
+    setOtherOrders(data.holdings)
+  }
+
   useEffect(() => {
-    async function fetchHoldings() {
-      const res = await fetch(`${API_URL}/holdings?id=${userid}`);
-      const data = await res.json();
-      setOtherOrders(data.holdings)
-    }
     fetchHoldings();
   }, [otherOrders.length]);
 
